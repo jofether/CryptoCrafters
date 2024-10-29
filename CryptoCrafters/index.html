@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Cryptogram Game Menu</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="cryptogram.js"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(event) {
+            var puzzlewords = [
+                ['ALGORITHM', 'DNJRULWKP - Step-by-step problem-solving method'],
+                ['DATABASE', 'GDWDEDVH - Organized collection of data'],
+                ['ARRAY', 'DUUDB - Collection of items in memory'],
+                ['CLOUD', 'FORXC - Networked storage and computing service'],
+                ['SECURE', 'VHFDUH - Protected from unauthorized access'],
+                ['NETWORK', 'QHWZRUN - Interconnected system of computers'],
+                ['VARIABLE', 'YDULDEOH - Named data storage in programming'],
+                ['INHERIT', 'LQKHULW - Passing properties in object-oriented programming'],
+                ['FUNCTION', 'IXQFWLRQ - Block of code that performs a task'],
+                ['BINARY', 'ELQDUC - Base-2 number system'],
+                ['COMPILE', 'FRPSLOH - Convert code into executable form'],
+                ['OPERATOR', 'RSHUDWRU - Symbol that performs operations in code'],
+                ['RECURSION', 'UHFUVVLRQ - Function that calls itself'],
+                ['VIRTUAL', 'YLUWXDO - Exists in software rather than physically'],
+                ['ENCRYPTION', 'HQFUASWLRQ - Process of securing data'],
+                ['BACKEND', 'EDFNHQG - Part of an app that handles data and logic']
+            ];
+            crosswordPuzzle(puzzlewords);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptogram Games Menu</h1>
+        <p>Select a game to play:</p>
+        <button id="cryptogram-game">Play Cryptogram</button>
+        <button id="puzzle-game">Play Puzzle Cipher</button>
+        <div id="game-area"></div>
+    </div>
+
+    <div class="container">
+        <h1>Cryptogram Crossword</h1>
+        <div id="crossword-grid">
+            <input type="text" maxlength="1" class="crossword-cell" data-row="0" data-col="0">
+        </div>
+        <div id="clues">
+            <h2>Clues (Encrypted):</h2>
+            <ul>
+                <li>1 Across: XOLXK (shift 3)</li>
+                <li>2 Down: QEB BXPQ (shift 3)</li>
+            </ul>
+        </div>
+        <button onclick="checkCrossword()">Check Solution</button>
+        <div id="feedback"></div>
+    </div>
+    
+    <div id="root" class="root"></div>
+    <div id="lists" class="lists">
+        <table>
+            <tr>
+                <td width="50%" id="left-list" valign="top" class="list-text">
+                    <center><h3>Across</h3></center>
+                </td>
+                <td width="50%" id="right-list" valign="top" class="list-text">
+                    <center><h3>Down</h3></center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="answer-form">
+        <div class="short-margin">
+            <p id="position-and-clue"></p>
+            <p>Answer: <input id="solution-answer" type="text" size="40"></p>
+            <p id="answer-results" class="hidden"></p>
+            <p>
+                <input type="button" id="cancel-button" value="Cancel">
+                <input type="button" id="answer-button" value="Answer">
+                <input type="button" id="reveal-answer-button" value="Reveal Answer">
+            </p>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+    <script src="decoding.js"></script>
+    <script src="cryptogram.js"></script>
+</body>
+</html>

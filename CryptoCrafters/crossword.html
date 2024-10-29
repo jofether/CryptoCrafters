@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>100% JQuery, Open-Source Crossword Puzzle Generator and Game</title>
+	<meta http-equiv="content-type" content="text/css/javascript/php; charset=UTF-8">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="crossword.js"></script>
+	<link type="text/css" rel="stylesheet" href="crossword.css">
+</head>
+
+<script type="text/javascript">
+	$(document).ready(function(event) {
+		var puzzlewords = [
+			['ALGORITHM', 'DNJRULWKP - Step-by-step problem-solving method'],
+			['DATABASE', 'GDWDEDVH - Organized collection of data'],
+			['ARRAY', 'DUUDB - Collection of items in memory'],
+			['CLOUD', 'FORXC - Networked storage and computing service'],
+			['SECURE', 'VHFDUH - Protected from unauthorized access'],
+			['NETWORK', 'QHWZRUN - Interconnected system of computers'],
+			['VARIABLE', 'YDULDEOH - Named data storage in programming'],
+			['INHERIT', 'LQKHULW - Passing properties in object-oriented programming'],
+			['FUNCTION', 'IXQFWLRQ - Block of code that performs a task'],
+			['BINARY', 'ELQDUC - Base-2 number system'],
+			['COMPILE', 'FRPSLOH - Convert code into executable form'],
+			['OPERATOR', 'RSHUDWRU - Symbol that performs operations in code'],
+			['RECURSION', 'UHFUVVLRQ - Function that calls itself'],
+			['VIRTUAL', 'YLUWXDO - Exists in software rather than physically'],
+			['ENCRYPTION', 'HQFUASWLRQ - Process of securing data'],
+			['BACKEND', 'EDFNHQG - Part of an app that handles data and logic']
+		];
+		crosswordPuzzle(puzzlewords);
+	});
+</script>
+<body>
+    <div class="crossword-container">
+        <div id="crossword-grid">
+            <h2>Your Crossword Puzzle</h2>
+            <div id="root" class="root"></div>
+        </div>
+
+        <div class="clue-section">
+            <div class="clue-group">
+                <h4>Across</h4>
+                <div id="left-list" class="list-text">
+                </div>
+            </div>
+            <div class="clue-group">
+                <h4>Down</h4>
+                <div id="right-list" class="list-text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="answer-form">
+        <div class="short-margin">
+            <p id="position-and-clue"></p>
+            <p>Answer : <input id="solution-answer" type="text" size="40"></p>
+            <p id="answer-results" class="hidden"></p>
+            <p>
+                <input type="button" id="cancel-button" value="Cancel">
+                <input type="button" id="answer-button" value="Answer">
+                <input type="button" id="reveal-answer-button" value="Reveal Answer">
+            </p>
+        </div>
+    </div>
+</body>
+</html>

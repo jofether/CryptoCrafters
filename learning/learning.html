@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography E-Learning</title>
+    <link rel="stylesheet" href="learning.css">
+</head>
+<body>
+    <!-- First box: What is Cryptography -->
+    <div class="container visible" id="box1">
+        <div class="content">
+            <h1>What is Cryptography?</h1>
+            <p>Cryptography is both an art and a science aimed at securing communication and information by transforming it into an unreadable format. This transformation process makes the information accessible only to those who have the right key or method to decode it.</p>
+            <p>The word "cryptography" is derived from Greek roots—"kryptos," meaning hidden, and "grapho," meaning to write. In the digital age, cryptography plays a critical role in protecting sensitive data and ensuring privacy, making it a foundation for secure communication across networks.</p>
+        </div>
+        <div class="image">
+            <img src="1st flex.jpg" alt="Cryptography">
+        </div>
+    </div>
+
+    <!-- Second box: Cryptanalysis -->
+    <div class="container hidden" id="box2">
+        <div class="content">
+            <h1>How Cryptography Works</h1>
+            <p>In cryptography, a cryptographic algorithm works together with a key—a word, number, or phrase—to encrypt plaintext (readable information) into ciphertext (unreadable format). The same plaintext will encrypt into different ciphertext depending on the key used. This key must remain secret for the encryption to be effective.</p>
+            <p>The security of encrypted data depends on two primary factors: the strength of the algorithm and the secrecy of the key. Together, the algorithm, all possible keys, and the protocols governing their use form what’s known as a cryptosystem. Cryptosystems are designed to protect information by making unauthorized decryption nearly impossible.</p>
+        </div>
+        <div class="image">
+            <img src="2nd flex.jpg" alt="Cryptography works">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box3">
+        <div class="content">
+            <h1>Cryptography vs. Cryptanalysis</h1>
+            <p>Cryptography is about securing data, but cryptanalysis is the science of breaking that security. Cryptanalysts, or attackers, attempt to decode information without the key by analyzing patterns, applying mathematical tools, and using logical reasoning.</p>
+            <p>Classical cryptanalysis is a challenging field that combines patience, analytical skills, and sometimes a bit of luck. Together, cryptography and cryptanalysis make up the broader field of cryptology. While cryptography is focused on creating secure communication systems, cryptanalysis aims to find weaknesses within those systems, making cryptology an essential discipline in the study of secure communication.</p>
+        </div>
+        <div class="image">
+            <img src="3rd flex.jpg" alt="Cryptanalysis">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box4">
+        <div class="content">
+            <h1>Terms in Cryptography</h1>
+            <p><strong>Plaintext:</strong> The original, readable message.</p>
+            <p><strong>Ciphertext:</strong> The encoded message that is unreadable without decryption.</p>
+            <p><strong>Encryption:</strong> The process of converting plaintext into ciphertext.</p>
+            <p><strong>-</strong> “Hello” to “M2#5K”</p>
+            <p><strong>Decryption:</strong> The process of converting ciphertext back into plaintext.</p>
+            <p><strong>-Example:</strong> “M2#5K” to “Hello”</p>
+        </div>
+        <div class="image">
+            <figcaption>The figure below shows the process of cryptography.</figcaption>
+            <img src="4th flex.png" alt="Terms">
+            
+        </div>
+    </div>
+
+    <div class="container hidden" id="box5">
+        <div class="content">
+            <h1>History of Cryptography</h1>
+            <p>As civilizations evolved, human beings got organized in tribes, groups, and kingdoms. This led to the emergence of ideas such as power, battles, supremacy, and politics. 
+            These ideas further fueled the natural need of people to communicate secretly with selective recipient which in turn ensured the continuous evolution of cryptography as well.
+            The roots of cryptography are found in Roman and Egyptian civilizations. Cryptography has a rich history dating back thousands of years.</p>
+        
+        </div>
+    
+        <div class="image">
+            <img src="5th flex.png" alt="History">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box6">
+        <div class="content">
+            <h1>Types of Cryptography</h1>
+            <ul>
+                <li>Symmetric-Key Cryptography</li>
+                <li>Asymmetric-Key Cryptography (Public-Key Cryptography)</li>
+                <li>Hash Functions</li>
+                <li>Stream Ciphers</li>
+                <li>Block Ciphers</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container hidden" id="box7">
+        <div class="content">
+            <h1>Symmetric-Key Cryptography</h1>
+            <p>In symmetric-key cryptography, the same key is used for both encryption and decryption. The sender and receiver must share the key in advance.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>AES (Advanced Encryption Standard)</li>
+                <li>DES (Data Encryption Standard)</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="symmetric.jpg" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box8">
+        <div class="content">
+            <h1>Asymmetric-Key Cryptography</h1>
+            <p>Asymmetric cryptography uses two different keys: a public key for encryption and a private key for decryption. Only the intended receiver, who possesses the private key, can decrypt the message. Asymmetric cryptography is widely used for secure communication over the internet, such as in SSL/TLS protocols and digital signatures.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>RSA (Rivest–Shamir–Adleman)</li>
+                <li>DSA (Digital Signature Algorithm)</li>
+                <li>EEC (Elliptic Curve Cryptography)</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="asymmetric.png" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box9">
+        <div class="content">
+            <h1>Hash Functions</h1>
+            <p>Hash functions transform data into a fixed-size hash value or "digest." Hash functions are one-way and cannot be reversed to obtain the original data. Hash functions are commonly used for data integrity verification (e.g., checksums) and password storage.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>SHA-256</li>
+                <li>MD5</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="hashing.png" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box10">
+        <div class="content">
+            <h1>Stream Ciphers</h1>
+            <p>Stream ciphers encrypt data one bit or byte at a time, in a continuous stream, rather than in blocks. Used in real-time applications where speed is essential, such as in securing network data or video streaming.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>RC4</li>
+                <li>Salsa20</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="stream.png" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box11">
+        <div class="content">
+            <h1>Block Ciphers</h1>
+            <p>Block ciphers encrypt data in fixed-size blocks, typically 64 or 128 bits at a time. Commonly used in encrypting large amounts of data, such as files and databases, and widely implemented in modern encryption protocols.</p>
+            <p><strong>Examples:</strong></p>
+            <ul>
+                <li>AES</li>
+                <li>DES</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="block.png" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box12">
+        <div class="content">
+            <h1>Applications of Cryptography</h1>
+            <ul>
+                <li>Secure Communications</li>
+                    <ul>
+                        <li>Used in email, messaging apps, and voice over IP (VoIP).</li>
+                    </ul>
+                <li>Data Protection</li>
+                    <ul>
+                        <li> Protecting sensitive data in storage and during transmission (databases, cloud storage).</li>
+                    </u>
+                <li>Digital Signatures</li>
+                    <ul>
+                        <li> Ensuring the authenticity and integrity of a message or document.</li>
+                    </ul>
+                <li>Blockchain and Cryptocurrency</li>
+                    <ul>
+                        <li>Securing transactions and maintaining the integrity of blockchain technology.</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="block.png" alt="symmetric">
+        </div>
+    </div>
+
+    <div class="container hidden" id="box13">
+        <div class="content">
+            <h1>Goals of Cryptography</h1>
+            <ul>
+                <li>Confidentiality (secrecy)</li>
+                    <ul>
+                        <li>Ensuring that no one can read the message except the intended receiver.</li>
+                    </ul>
+                <li>Integrity (anti-tampering)</li>
+                    <ul>
+                        <li>Assuring the receiver that the received message has not been altered in any way from the original.</li>
+                    </u>
+                <li>Authentication</li>
+                    <ul>
+                        <li>Cryptography can help establish identity for authentication purposes The process of proving one's identity.</li>
+                    </ul>
+                <li>Non-repudiation. </li>
+                    <ul>
+                        <li>A mechanism to prove that the sender really sent this message.</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="block.png" alt="symmetric">
+        </div>
+    </div>
+
+    <script src="learning.js"></script>
+</body>
+</html>

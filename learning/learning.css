@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #dfe8d8 0%, #f0f4e3 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 1300px; /* Width remains the same */
+    height: 500px; /* Height remains the same */
+    position: absolute;
+    transition: transform 0.5s ease; /* Keep transform transition for smoothness */
+}
+
+.hidden {
+    transform: translateY(-100%); /* Move out of view upwards */
+    opacity: 0; /* Fade out */
+}
+
+.visible {
+    transform: translateY(0); /* Reset to original position */
+    opacity: 1; /* Fade in */
+    animation: appear .5s linear; /* Add the animation */
+}
+
+.content {
+    max-width: 600px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#box3 h1 {
+    font-size: 2.4em; /* Adjust this value as needed */
+}
+
+
+.content p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.image img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#box4 .image img {
+    width: 500px; /* Adjust the width as desired */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.image figcaption {
+    font-size: 1.1em; /* Adjust font size */
+    font-style: italic; /* Change to italic for a distinct style */
+    color: #555; /* Softer color for readability */
+    margin-top: 10px; /* Adds space between the image and figcaption */
+    text-align: center; /* Center the caption below the image */
+}
+

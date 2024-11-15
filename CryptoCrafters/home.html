@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoCrafters</title>
+    <link type="text/css" rel="stylesheet" href="home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="icon" href="icons/web-logo.png" type="image/png">
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Redirect to Cryptogram game on click
+            $('#cryptogram-game').click(function() {
+                $(this).addClass('button-clicked');
+                setTimeout(() => {
+                    window.location.href = 'cryptogram.html';
+                }, 500); 
+            });
+
+            // Redirect to Crossword game on click
+            $('#crossword-game').click(function() {
+                $(this).addClass('button-clicked');
+                setTimeout(() => {
+                    window.location.href = 'crossword.html';
+                }, 500);
+            });
+
+            // Hover effect on the title
+            $('.container h1').hover(
+                function() { $(this).addClass('title-hover'); },
+                function() { $(this).removeClass('title-hover'); }
+            );
+
+            // Toggle navigation menu visibility
+            $('#burger-menu').click(function() {
+                $('.nav-widget').toggleClass('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Burger menu for navigation -->
+    <div id="burger-menu" class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    
+    <!-- Navigation menu -->
+    <nav class="nav-widget">
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="learning.html">Learn</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main container -->
+    <div class="container-wrapper">
+        <div class="container">
+            <h1>CryptoCrafters</h1>
+            <p>Select a game to play:</p>
+            <!-- Game selection buttons -->
+            <button id="cryptogram-game">
+                <img src="icons/cryptogram-icon.png" alt="Cryptogram Icon" class="icon-3d">
+                Cryptogram
+            </button>
+            <button id="crossword-game">
+                <img src="icons/crossword-icon.png" alt="Crossword Icon" class="icon-3d">
+                Crossword
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
